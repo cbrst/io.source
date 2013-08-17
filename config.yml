@@ -1,0 +1,66 @@
+#
+# BASE CONFIGURATION
+#
+
+# `base_url` should only be changed if your site isn't hosted at the root of a domain.
+# `domain` is used to generate absolute URLs. (required to generate a valid feed)
+#
+#   Example:
+#       http://my-site.com/
+#           base_url: /
+#           domain: my-site.com
+#       http://my-site.com/my-blog/
+#           base_url: /my-blog/
+#           domain: my-site.com
+base_url: /
+domain: crshd.github.io
+
+
+#
+# METADATA
+#
+
+# Used in header meta tags and the site feed. (required to generate a valid feed)
+author: 'Christian "crshd" Brassat'
+# A description of your site to be used in header meta tags.
+description: 'Yup, got that.'
+# Used in the site feed.
+email: trashbukkit@gmail.com
+
+# Your site's subtitle.
+# subtitle: 'tail -f &#9749; >> /dev/throat'
+subtitle: 'tail -f /dev/brain >> /www'
+# subtitle: "&#9863; < that's me!"
+
+# Your site's title. (required to generate a valid feed)
+title: 'crshd'
+
+
+#
+# CONTENT SETTINGS
+#
+
+archive_layout: archive.html
+archives_url: /archives/
+tag_layout: tag.html
+tags_url: /
+
+# Links to profiles on various social networking sites.
+#   Set any of the following to your username/ID on that site to enable it.
+social:
+    dribbble:
+    facebook:
+    github: crshd
+    google_plus: 108913776594552349551
+    lastfm: coffeefreeze
+    stack_overflow: crshd
+    steam: trashbukkit
+    twitter: cr4shd
+
+#
+# THIRD PARTY SETTINGS
+#
+
+# If you'd like to enable Google Analytics for your site, set this to your tracking code.
+analytics:
+

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	{% include 'page.header.html' %}
+
+	{% if site.title %}<title>{% if title %}{{ title }} &ndash; {% endif %}{{ site.title }}{% if not title and site.subtitle %} &ndash; {{ site.subtitle }}{% endif %}</title>{% endif %}
+</head>
+
+<body>
+	<!--[if lt IE 7]>
+ 	<p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+ 	<![endif]-->
+
+ 	{% include 'navbar.html' %}
+
+ 	<div class="main-container clearfix">
+ 		<div class="main wrapper">
+ 			<!-- {% block breadcrumbs %}{% endblock %} -->
+
+ 			{% block content %}{% endblock %}
+ 		</div>
+ 	</div>
+
+		<div class="clearfix"></div>
+
+ 	<div class="footer-container clearfix">
+ 		<footer class="wrapper clearfix">
+ 			<p>
+					<ul id="social">
+						{% if site.social.github %}         <li><a href="https://github.com/{{ site.social.github }}">                     <i class="icon-github"></i>        </a></li>{% endif %}
+						{% if site.social.twitter %}        <li><a href="https://twitter.com/#!/{{ site.social.twitter }}">                <i class="icon-twitter"></i>       </a></li>{% endif %}
+						{% if site.social.lastfm %}         <li><a href="http://www.last.fm/user/{{ site.social.lastfm }}">                <i class="icon-lastfm"></i>        </a></li>{% endif %}
+						{% if site.social.google_plus %}    <li><a href="https://plus.google.com/{{ site.social.google_plus }}">           <i class="icon-google-plus"></i>   </a></li>{% endif %}
+						{% if site.social.dribbble %}       <li><a href="http://dribbble.com/{{ site.social.dribbble }}">                  <i class="icon-dribbble"></i>      </a></li>{% endif %}
+						{% if site.social.facebook %}       <li><a href="https://www.facebook.com/{{ site.social.facebook }}">             <i class="icon-facebook"></i>      </a></li>{% endif %}
+						{% if site.social.stack_overflow %} <li><a href="http://stackoverflow.com/users/{{ site.social.stack_overflow }}"> <i class="icon-stackexchange"></i> </a></li>{% endif %}
+						{% if site.social.steam %}          <li><a href="http://steamcommunity.com/id/{{ site.social.steam }}">            <i class="icon-gamepad"></i>       </a></li>{% endif %}
+     </ul>
+ 				{% if site.author %}&copy; {{ none|date('%Y') }} {{ site.author }} &ndash; {% endif %}
+ 				powered by <a href="http://mynt.mirroredwhite.com/">mynt</a> &ndash;
+ 				hosted using <a href="http://pages.github.com/">GitHub Pages</a> &ndash;
+ 				<a href="https://github.com/crshd/crshd.github.io/issues">submit a bug report</a>
+ 			</p>
+ 		</footer>
+ 	</div>
+
+ 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+ 	<script>window.jQuery || document.write('<script src="assets/js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
+
+ 	<script src="assets/js/main.js"></script>
+ </body>
+ </html>

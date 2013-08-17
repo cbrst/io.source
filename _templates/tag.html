@@ -1,0 +1,35 @@
+{% extends 'layout.html' %}
+
+
+{% set title = tag.name %}
+
+{% block breadcrumbs %}
+	<ul id="breadcrumbs">
+		<li><a href="{{ get_url() }}" data-pjax="#content">Blog</a><span>&rsaquo;</span></li>
+		<li><a href="{{ get_url('archives/') }}" data-pjax="#content">Archives</a><span>&rsaquo;</span></li>
+		<li>{{ tag.name }}</li>
+	</ul>
+{% endblock %}
+
+{% block content %}
+{% for post in tag.container %}
+<article class="index">
+	<h1>
+		<a href="{{ get_url(post.url) }}">{{ post.title }}</a>
+	</h1>
+	<h2 class="subheader">
+		{{ post.date }}
+		{% if post.tags %}&ndash;
+		{% for tag in post.tags %}
+		<a href="{{ get_url(posts.tags[tag].url) }}">{{ tag }}</a>
+		{% if not loop.last %}, {% endif %}
+		{% endfor %}
+		{% endif %}
+	</h2>
+	{% if post.image %}
+	<div class="postimage" style="background-image: url({{ get_asset('images/post_images/'+post.image) }})"> </div>
+	{% endif %}
+	<p>{{ post.excerpt }}</p>
+</article>
+{% endfor %}
+{% endblock %}

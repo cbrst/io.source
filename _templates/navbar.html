@@ -1,0 +1,16 @@
+<div class="header-container">
+	<header class="wrapper clearfix">
+		<h1 class="title">
+			<!-- {{ site.title }} &#10097;<span>&#10097; {{ site.subtitle }}</span> -->
+			{{ site.title }} <i class="icon-double-angle-up"></i> {% if title %}{{ title }}{% else %}{{ site.subtitle }}{% endif %}
+		</h1>
+	</header>
+</div>
+<nav class="clearfix">
+	<ul>
+		<li><a href="{{ get_url() }}">Home</a></li>
+		<li><a href="{{ get_url('Freebies/') }}">Freebies</a></li>
+		<li><a href="{{ get_url('archives/') }}">Archives</a></li>
+		<li><a href="{{ get_url('feed.xml') }}">Feed</a></li>
+	</ul>
+</nav>
