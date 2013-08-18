@@ -17,6 +17,14 @@ img {
   display: block;
   margin: auto;
 }
+::-moz-selection {
+  background: #698074;
+  text-shadow: none;
+}
+::selection {
+  background: #698074;
+  text-shadow: none;
+}
 .title {
   font-family: 'Economica', 'Helvetica', 'Arial', sans-serif;
   text-transform: uppercase;
