@@ -9,7 +9,7 @@
 
 // Colors
 
-basecolor = hsl(150, 10%, 32%)
+basecolor = hsl(200, 7%, 28%)
 basecolor-light = lighten(basecolor, 8%)
 
 fontcolor = #ddd
@@ -23,92 +23,121 @@ headerfonts = 'Economica', 'Helvetica', 'Arial', sans-serif
 // =========
 
 vendor(prop, args)
-	-webkit-{prop} args
-	   -moz-{prop} args
-	        {prop} args
+  -webkit-{prop} args
+  -moz-{prop} args
+  {prop} args
 
 border-box()
-	vendor('box-sizing', border-box)
+  vendor('box-sizing', border-box)
+
+text-decoration(line, style = solid, color = fontcolor)
+  text-decoration line
+  vendor('text-decoration-style', style)
+  vendor('text-decoration-color', color)
 
 // Common
 // ======
 
 // Global
 body
-	background basecolor
-	color fontcolor
-	font 12px/22px sansfonts
+  background basecolor
+  color fontcolor
+  font 12px/22px sansfonts
+  line-height 2.2em
 
 a
-	text-decoration none
-	color #fff
+  text-decoration underline dotted #ddd
+  color #fff
 
-	&:hover
-		text-decoration underline
+  &:hover
+    text-decoration underline
 
+dl
+  dt
+    font-weight bold
+
+  dd
+    border-left 3px solid lighten(basecolor, 3%)
+    margin 0 0 0 20px
+    padding 0 0 0 20px
 
 img
-	vertical-align middle
-	display block
-	margin auto
+  vertical-align middle
+  display block
+  margin auto
 
 ::-moz-selection
-	background lighten(basecolor, 20%)
-	text-shadow none
+  background lighten(basecolor, 20%)
+  text-shadow none
 
 ::selection
-	background lighten(basecolor, 20%)
-	text-shadow none
+  background lighten(basecolor, 20%)
+  text-shadow none
 
 // Header
 .title
-	font-family headerfonts
-	text-transform uppercase
-	font-weight normal
+  font-family headerfonts
+  text-transform uppercase
+  font-weight normal
 
-	i
-		color darken(fontcolor, 20%)
+  i
+    color darken(fontcolor, 20%)
 
 // Main
 .wrapper
-	width 90%
-	margin 0 5%
+  width 90%
+  margin 0 5%
 
-.postimage
-	background-position center
-	background-size 105%
-	width 100%
-	height 80px
-	border 4px solid rgba(basecolor, 0.7)
+.main
+  h1
+    a
+      text-decoration none
 
-	border-box()
+  .postimage
+    background-position center
+    background-size 105%
+    width 100%
+    height 80px
+    border 4px solid rgba(basecolor, 0.7)
+
+    border-box()
 
 // Code boxes
 div.code
-	background darken(basecolor, 10%)
-	border-bottom 3px solid basecolor-light
+  background darken(basecolor, 10%)
+  border-bottom 3px solid basecolor-light
+  overflow auto
 
-	td
-		padding 0 10px
+  pre
+    white-space pre
 
-		&.linenos
-			background darken(basecolor, 4%)
+  td
+    padding 0 10px
+
+    &.linenos
+      background darken(basecolor, 4%)
 
 code,
 kbd,
 pre,
 samp
-	font-family monofonts
+  font-family monofonts
+
 
 // Footer
-#social
-	li,
-	img
-		display inline
+footer
+  a
+    text-decoration none
+
+  #social
+
+    li,
+    img
+      display inline
 
 
-	li
-		margin-right 1em
+    li
+      margin-right 1em
 
 
 // Mobile
@@ -116,59 +145,58 @@ samp
 
 @media only screen
 
-	// Header
-	.header-container
-		background lighten(basecolor, 5%)
+  // Header
+  .header-container
+    background lighten(basecolor, 5%)
 
-	nav
-		background lighten(basecolor, 5%)
-		border-bottom 4px solid lighten(basecolor, 10%)
+  nav
+    background lighten(basecolor, 5%)
+    border-bottom 4px solid lighten(basecolor, 10%)
 
-		ul
-			margin 0
-			padding 0
+    ul
+      margin 0
+      padding 0
 
-			a
-				background lighten(basecolor, 10%)
-				display block
-				margin-bottom 10px
-				padding 15px 0
-				text-align center
-				text-decoration none
-				font-weight bold
+      a
+        background lighten(basecolor, 10%)
+        display block
+        margin-bottom 10px
+        padding 15px 0
+        text-align center
+        font-weight bold
 
-				border-box()
+        border-box()
 
-	// Main
-	.main
-		padding 30px 0
+  // Main
+  .main
+    padding 30px 0
 
-		h1
-			font-family @header-font
-			font-size 2em
-			font-weight normal
+    h1
+      font-family @header-font
+      font-size 2em
+      font-weight normal
 
-		h2
-			font-size 1em
+    h2
+      font-size 1em
 
-		.index
-			margin-bottom 4em
+    .index
+      margin-bottom 4em
 
-			&:nth-last-child(1)
-				margin-bottom 0
+      &:nth-last-child(1)
+        margin-bottom 0
 
-	.footer-container
-		background lighten(basecolor, 5%)
-		border-top 4px solid lighten(basecolor, 10%)
+  .footer-container
+    background lighten(basecolor, 5%)
+    border-top 4px solid lighten(basecolor, 10%)
 
-		footer
-			padding 20px 0
-			text-align center
+    footer
+      padding 20px 0
+      text-align center
 
-	// IE Fixes
-	.ie7
-		.title
-			padding-top 20px
+  // IE Fixes
+  .ie7
+    .title
+      padding-top 20px
 
 
 // Intermediate
@@ -176,116 +204,121 @@ samp
 
 @media only screen and (min-width: 480px) and (max-width: 767px)
 
-	nav
-		ul
-			margin 0
+  nav
+    ul
+      margin 0
 
-			li
-				a
-					float left
-					width 22%
-					margin 0 2%
-					padding 20px 2%
-					margin-bottom 0
+      li
+        a
+          float left
+          width 22%
+          margin 0 2%
+          padding 20px 2%
+          margin-bottom 0
 
-				&:first-child
-					a
-						margin-left 0
+        &:first-child
+          a
+            margin-left 0
 
-				&:last-child
-					a
-						margin-right 0
+        &:last-child
+          a
+            margin-right 0
 
-	// IE 7 Fixes
-	nav
-		li
-			display inline
+  // IE 7 Fixes
+  nav
+    li
+      display inline
 
-	.oldie
-		nav
-			a
-				margin 0 0.7%
+  .oldie
+    nav
+      a
+        margin 0 0.7%
 
 // Desktop
 // =======
 
 @media only screen and (min-width: 768px)
 
-	// Header
-	.header-container
-		background transparent
+  // Header
+  .header-container
+    background transparent
 
-		.title
-			margin 10% 0 4% 20%
-			text-shadow 0 1px 1px rgba(0,0,0,0.3)
+    .title
+      margin 10% 0 4% 20%
+      text-shadow 0 1px 1px rgba(0,0,0,0.3)
 
-	nav
-		background transparent
-		float left
-		padding 38px 0
-		width 30%
-		border-bottom none
+  nav
+    background transparent
+    float left
+    padding 38px 0
+    width 30%
+    border-bottom none
 
-		ul
-			li
-				display list-item
+    ul
+      li
+        display list-item
 
-				&:hover
-					background rgb(69,85,77)
+        &:hover
+          background darken(basecolor, 10%)
 
-				a
-					float none
-					margin-left 0
+        a
+          float none
+          margin-left 0
 
-					display block
-					margin-bottom 10px
-					padding 0 10% 0 0
+          display block
+          margin-bottom 10px
+          padding 0 10% 0 0
 
-					text-decoration none
+          text-decoration none
 
-					background none
-					width 100%
-					text-align right
-					text-transform uppercase
-					font-weight normal
+          background none
+          width 100%
+          text-align right
+          text-transform uppercase
+          font-weight normal
 
-					border-box()
+          border-box()
 
-	// Main
-	.main-container
-		border-left 1px solid lighten(basecolor, 10%)
-		float right
-		width 70%
+  // Main
+  .main-container
+    border-left 1px solid lighten(basecolor, 10%)
+    float right
+    width 70%
+    padding-right 10%
 
-		border-box()
+    border-box()
 
-	.main
-		article
-			h1
-				color white
-				font-family 'Source Sans Pro', sans-serif
-				font-size 1em
-				font-weight normal
-				text-transform uppercase
+  .main
+    article
+      h1
+        color white
+        font-family 'Source Sans Pro', sans-serif
+        font-size 1em
+        font-weight normal
+        text-transform uppercase
 
-			h2
-				border-width 1px 0
-				border-color lighten(basecolor, 10%)
-				border-style solid
-				font-size 1em
-				font-style italic
-				font-weight normal
+      h2,
+      h3
+        border-width 1px 0
+        border-color lighten(basecolor, 10%)
+        border-style solid
+        font-size 1em
+        font-style italic
+        font-weight normal
+        
+      h3
+        border-width 0 0 1px 0
 
-	article > h2
-		margin-top 7px
+  article > h2
+    margin-top 7px
 
-	// Footer
-	.footer-container
-		background transparent
-		border-top none
+  // Footer
+  .footer-container
+    background transparent
+    border-top none
 
-		#social
-			display inline
+    #social
+      display inline
 
 // @media only screen and (min-width: 1140px)
 
@@ -293,52 +326,52 @@ samp
 // ==============
 
 .ir
-	background-color transparent
-	border 0
-	overflow hidden
-	*text-indent -9999px
+  background-color transparent
+  border 0
+  overflow hidden
+  *text-indent -9999px
 
-	&:before
-		content ""
-		display block
-		width 0
-		height 150%
+  &:before
+    content ""
+    display block
+    width 0
+    height 150%
 
 .hidden
-	display none !important
-	visibility hidden
+  display none !important
+  visibility hidden
 
 .visuallyhidden
-	border 0
-	clip rect(0 0 0 0)
-	height 1px
-	margin -1px
-	overflow hidden
-	padding 0
-	position absolute
-	width 1px
+  border 0
+  clip rect(0 0 0 0)
+  height 1px
+  margin -1px
+  overflow hidden
+  padding 0
+  position absolute
+  width 1px
 
 .visuallyhidden.focusable
-	&:active,
-	&:focus
-		clip auto
-		height auto
-		margin 0
-		overflow visible
-		position static
-		width auto
+  &:active,
+  &:focus
+    clip auto
+    height auto
+    margin 0
+    overflow visible
+    position static
+    width auto
 
 .invisible
-	visibility hidden
+  visibility hidden
 
 .clearfix
-	*zoom 1
+  *zoom 1
 
-	&:before,
-	&:after
-		content " "
-		display table
+  &:before,
+  &:after
+    content " "
+    display table
 
-	&:after
-		clear both
+  &:after
+    clear both
 
