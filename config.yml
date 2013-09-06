@@ -48,13 +48,11 @@ tags_url: /
 # Links to profiles on various social networking sites.
 #   Set any of the following to your username/ID on that site to enable it.
 social:
-    dribbble:
-    facebook:
     github: crshd
     google_plus: 108913776594552349551
     lastfm: coffeefreeze
     stack_overflow: crshd
-    steam: trashbukkit
+    steam: 76561198081615765
     twitter: cr4shd
 
 #

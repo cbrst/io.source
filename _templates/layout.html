@@ -27,16 +27,16 @@
  	<div class="footer-container clearfix">
  		<footer class="wrapper clearfix">
  			<p>
-					<ul id="social">
-						{% if site.social.github %}         <li><a href="https://github.com/{{ site.social.github }}">                     <i class="icon-github"></i>        </a></li>{% endif %}
-						{% if site.social.twitter %}        <li><a href="https://twitter.com/#!/{{ site.social.twitter }}">                <i class="icon-twitter"></i>       </a></li>{% endif %}
-						{% if site.social.lastfm %}         <li><a href="http://www.last.fm/user/{{ site.social.lastfm }}">                <i class="icon-lastfm"></i>        </a></li>{% endif %}
-						{% if site.social.google_plus %}    <li><a href="https://plus.google.com/{{ site.social.google_plus }}">           <i class="icon-google-plus"></i>   </a></li>{% endif %}
-						{% if site.social.dribbble %}       <li><a href="http://dribbble.com/{{ site.social.dribbble }}">                  <i class="icon-dribbble"></i>      </a></li>{% endif %}
-						{% if site.social.facebook %}       <li><a href="https://www.facebook.com/{{ site.social.facebook }}">             <i class="icon-facebook"></i>      </a></li>{% endif %}
-						{% if site.social.stack_overflow %} <li><a href="http://stackoverflow.com/users/{{ site.social.stack_overflow }}"> <i class="icon-stackexchange"></i> </a></li>{% endif %}
-						{% if site.social.steam %}          <li><a href="http://steamcommunity.com/id/{{ site.social.steam }}">            <i class="icon-gamepad"></i>       </a></li>{% endif %}
-     </ul>
+				<ul id="social">
+					{% if site.social.github         %} <li><a href="https://github.com/{{ site.social.github }}">                     <i class="icon-github"></i>        </a></li>{% endif %}
+					{% if site.social.twitter        %} <li><a href="https://twitter.com/#!/{{ site.social.twitter }}">                <i class="icon-twitter-sign"></i>  </a></li>{% endif %}
+					{% if site.social.lastfm         %} <li><a href="http://www.last.fm/user/{{ site.social.lastfm }}">                <i class="icon-music"></i>         </a></li>{% endif %}
+					{% if site.social.google_plus    %} <li><a href="https://plus.google.com/{{ site.social.google_plus }}">           <i class="icon-plus-sign"></i>     </a></li>{% endif %}
+					{% if site.social.dribbble       %} <li><a href="http://dribbble.com/{{ site.social.dribbble }}">                  <i class="icon-dribbble"></i>      </a></li>{% endif %}
+					{% if site.social.facebook       %} <li><a href="https://www.facebook.com/{{ site.social.facebook }}">             <i class="icon-facebook"></i>      </a></li>{% endif %}
+					{% if site.social.stack_overflow %} <li><a href="http://stackoverflow.com/users/{{ site.social.stack_overflow }}"> <i class="icon-stackexchange"></i> </a></li>{% endif %}
+					{% if site.social.steam          %} <li><a href="http://steamcommunity.com/profiles/{{ site.social.steam }}">      <i class="icon-gamepad"></i>       </a></li>{% endif %}
+				</ul>
  				{% if site.author %}&copy; {{ none|date('%Y') }} {{ site.author }} &ndash; {% endif %}
  				powered by <a href="http://mynt.mirroredwhite.com/">mynt</a> &ndash;
  				hosted using <a href="http://pages.github.com/">GitHub Pages</a> &ndash;
