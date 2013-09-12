@@ -36,6 +36,7 @@
 					{% if site.social.facebook       %} <li><a href="https://www.facebook.com/{{ site.social.facebook }}">             <i class="icon-facebook"></i>      </a></li>{% endif %}
 					{% if site.social.stack_overflow %} <li><a href="http://stackoverflow.com/users/{{ site.social.stack_overflow }}"> <i class="icon-stackexchange"></i> </a></li>{% endif %}
 					{% if site.social.steam          %} <li><a href="http://steamcommunity.com/profiles/{{ site.social.steam }}">      <i class="icon-gamepad"></i>       </a></li>{% endif %}
+					<li><a onClick="$('#bitcoin').show();" href="#bitcoin"><i class="icon-btc"></i></a></li>
 				</ul>
  				{% if site.author %}&copy; {{ none|date('%Y') }} {{ site.author }} &ndash; {% endif %}
  				powered by <a href="http://mynt.mirroredwhite.com/">mynt</a> &ndash;
@@ -43,11 +44,23 @@
  				<a href="https://github.com/crshd/io.source">source</a> &ndash;
  				<a href="https://github.com/crshd/crshd.github.io/issues">submit a bug report</a>
  			</p>
+			<div id="bitcoin">
+				<a href="bitcoin:18vnsb92iSSBM6GWw1BDjiTYPdo43VYtCf">
+					<img src="/assets/images/qr_coin.png" >
+				</a>
+				<p>18vnsb92iSSBM6GWw1BDjiTYPdo43VYtCf</p>
+			</div>
+
  		</footer>
  	</div>
 
  	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
  	<script>window.jQuery || document.write('<script src="assets/js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
+	<script>
+		$(document).ready(function() {
+			$('#bitcoin').hide();
+		});
+	</script>
 
  	<script src="assets/js/main.js"></script>
  </body>
