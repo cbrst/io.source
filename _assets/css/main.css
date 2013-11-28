@@ -38,6 +38,11 @@ img {
   display: block;
   margin: auto;
 }
+p code {
+  background: #3c4245;
+  border-bottom: 1px solid #535c60;
+  padding: 0 3px;
+}
 ::-moz-selection {
   background: #656f74;
   text-shadow: none;
