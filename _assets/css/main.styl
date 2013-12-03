@@ -9,7 +9,18 @@
 
 // Colors
 
+// Default
 basecolor = hsl(200, 7%, 28%)
+
+// X-Mas
+// basecolor = hsl(0, 50%, 28%)
+
+// V-Day
+// basecolor = hsl(337, 61%, 28%)
+
+// Halloween
+// basecolor = hsl(25, 75%, 28%)
+
 basecolor-light = lighten(basecolor, 8%)
 
 fontcolor = #ddd
@@ -172,10 +183,21 @@ footer
         font-weight bold
 
         border-box()
+        
+      li
+        ul
+          display none
 
   // Main
   .main
     padding 30px 0
+    
+    article
+      background lighten(basecolor, 5%)
+      padding 1em
+      border-color lighten(basecolor, 10%)
+      border-width 1px 1px 5px
+      border-style solid
 
     h1
       font-family @header-font
@@ -190,7 +212,7 @@ footer
 
       &:nth-last-child(1)
         margin-bottom 0
-
+        
   .footer-container
     background lighten(basecolor, 5%)
     border-top 4px solid lighten(basecolor, 10%)
@@ -217,9 +239,9 @@ footer
       li
         a
           float left
-          width 22%
-          margin 0 2%
-          padding 20px 2%
+          width 18%
+          margin 0 1.2%
+          padding 20px auto
           margin-bottom 0
 
         &:first-child
@@ -229,6 +251,7 @@ footer
         &:last-child
           a
             margin-right 0
+
 
   // IE 7 Fixes
   nav
@@ -260,12 +283,13 @@ footer
     width 30%
     border-bottom none
 
+    &.fixed
+      position fixed
+      top 0
+
     ul
       li
         display list-item
-
-        &:hover
-          background darken(basecolor, 10%)
 
         a
           float none
@@ -284,7 +308,17 @@ footer
           font-weight normal
 
           border-box()
+          
+        &:hover
+          background darken(basecolor, 10%)
 
+          ul
+            display block
+            margin-bottom 5px
+            
+            li
+              background darken(basecolor, 15%)
+          
   // Main
   .main-container
     border-left 1px solid lighten(basecolor, 10%)

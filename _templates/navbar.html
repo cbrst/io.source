@@ -9,6 +9,15 @@
 <nav class="clearfix">
 	<ul>
 		<li><a href="{{ get_url() }}">Home</a></li>
+    <li>
+      <a href="{{ get_url('tags') }}">Tags</a>
+      <ul class="tags">
+				{% for tag in posts.tags %}
+        <li><a href="{{ get_url(tag) }}">{{ tag }}</a></li>
+				{% endfor %}
+				{{ archives }}
+      </ul>
+		</li>
 		<li><a href="{{ get_url('Freebies/') }}">Freebies</a></li>
 		<li><a href="{{ get_url('archives/') }}">Archives</a></li>
 		<li><a href="{{ get_url('feed.xml') }}">Feed</a></li>

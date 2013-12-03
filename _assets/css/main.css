@@ -141,8 +141,18 @@ footer #social li {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
   }
+  nav ul li ul {
+    display: none;
+  }
   .main {
     padding: 30px 0;
+  }
+  .main article {
+    background: #4b5256;
+    padding: 1em;
+    border-color: #535c60;
+    border-width: 1px 1px 5px;
+    border-style: solid;
   }
   .main h1 {
     font-family: ;
@@ -176,9 +186,9 @@ footer #social li {
   }
   nav ul li a {
     float: left;
-    width: 22%;
-    margin: 0 2%;
-    padding: 20px 2%;
+    width: 18%;
+    margin: 0 1.2%;
+    padding: 20px auto;
     margin-bottom: 0;
   }
   nav ul li:first-child a {
@@ -209,11 +219,12 @@ footer #social li {
     width: 30%;
     border-bottom: none;
   }
+  nav.fixed {
+    position: fixed;
+    top: 0;
+  }
   nav ul li {
     display: list-item;
-  }
-  nav ul li:hover {
-    background: #3c4245;
   }
   nav ul li a {
     float: none;
@@ -236,6 +247,16 @@ footer #social li {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+  }
+  nav ul li:hover {
+    background: #3c4245;
+  }
+  nav ul li:hover ul {
+    display: block;
+    margin-bottom: 5px;
+  }
+  nav ul li:hover ul li {
+    background: #383e41;
   }
   .main-container {
     border-left: 1px solid #535c60;
