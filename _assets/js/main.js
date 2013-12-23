@@ -4,7 +4,7 @@ $(document).ready(function() {
 	 * Fixed navigation
 	 */
 	var navOffset = $('nav').offset().top;
-	console.log(navOffset);
+	var titleOffset = $('.title').offset().top;
 
 	$(window).scroll(function() {
 		if($(window).scrollTop() > navOffset) {
