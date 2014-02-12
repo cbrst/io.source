@@ -10,7 +10,8 @@
 // Colors
 
 // Default
-basecolor = hsl(200, 7%, 28%)
+// basecolor = hsl(200, 7%, 28%)
+basecolor = hsl(100, 0%, 18%)
 
 // X-Mas
 // basecolor = hsl(0, 50%, 28%)
@@ -77,7 +78,39 @@ img
   display block
   margin auto
   
+table:not(.highlighttable)
+  // background darken(basecolor, 10%)
+  // border-bottom 3px solid basecolor-light
+  margin 1em 0
+  table-layout fixed
+  width 100%
+  
+  &~table
+    margin 3em 0 1em
+  
+  thead
+    // background darken(basecolor, 4%)
+    border-bottom 3px solid basecolor-light
+
+  th, td
+    padding 0 1em
+
+  tbody
+    tr
+      &:hover
+        background lighten(basecolor, 2%) 
+        
+        th
+          background lighten(basecolor, 4%)
+
+      th
+        // background darken(basecolor, 4%)
+        text-align right  
+        
 p
+  &+p
+    margin 2em 0 1em
+
   code
     background darken(basecolor, 10%)
     border-bottom 1px solid lighten(basecolor, 10%)
@@ -192,13 +225,6 @@ footer
   .main
     padding 30px 0
     
-    article
-      background lighten(basecolor, 5%)
-      padding 1em
-      border-color lighten(basecolor, 10%)
-      border-width 1px 1px 5px
-      border-style solid
-
     h1
       font-family @header-font
       font-size 2em
@@ -294,7 +320,7 @@ footer
         a
           float none
           margin-left 0
-
+          
           display block
           margin-bottom 10px
           padding 0 10% 0 0
@@ -307,24 +333,27 @@ footer
           text-transform uppercase
           font-weight normal
 
-          border-box()
           
         &:hover
           background darken(basecolor, 10%)
+          box-shadow inset 0 1px 0 lighten(basecolor, 1%), inset 0 -1px 0 lighten(basecolor, 1%)
 
           ul
             display block
-            margin-bottom 5px
+            padding-bottom 5px
             
             li
               background darken(basecolor, 15%)
+              
+              &:hover
+                box-shadow none
           
   // Main
   .main-container
     border-left 1px solid lighten(basecolor, 10%)
     float right
     width 70%
-    padding-right 10%
+    padding-right 20%
 
     border-box()
 
@@ -336,6 +365,9 @@ footer
         font-size 1em
         font-weight normal
         text-transform uppercase
+        
+      p~h1
+        margin-top 4em 
 
       h2,
       h3
@@ -351,6 +383,11 @@ footer
 
   article > h2
     margin-top 7px
+
+  img
+    &.right
+      display inline-block
+      float right
 
   // Footer
   .footer-container

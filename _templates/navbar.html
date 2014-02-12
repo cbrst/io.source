@@ -2,7 +2,7 @@
 	<header class="wrapper clearfix">
 		<h1 class="title">
 			<!-- {{ site.title }} &#10097;<span>&#10097; {{ site.subtitle }}</span> -->
-			{{ site.title }} <i class="icon-double-angle-up"></i> {% if title %}{{ title }}{% else %}{{ site.subtitle }}{% endif %}
+			{{ site.title }} <i class="fa fa-quote-left"></i> {% if title %}{{ title }}{% else %}{{ site.subtitle }}{% endif %}
 		</h1>
 	</header>
 </div>
@@ -11,15 +11,14 @@
 	<ul>
 		<li><a href="{{ get_url() }}">Home</a></li>
     <li>
-      <a href="{{ get_url('tags') }}">Tags</a>
+      <a href="#">Tags</a>
       <ul class="tags">
 				{% for tag in posts.tags %}
-        <li><a href="{{ get_url(tag) }}">{{ tag }}</a></li>
+        <li><a href="{{ get_url(posts.tags[tag].url) }}">{{ tag }}</a></li>
 				{% endfor %}
 				{{ archives }}
       </ul>
 		</li>
-		<li><a href="{{ get_url('Freebies/') }}">Freebies</a></li>
 		<li><a href="{{ get_url('archives/') }}">Archives</a></li>
 		<li><a href="{{ get_url('feed.xml') }}">Feed</a></li>
 	</ul>

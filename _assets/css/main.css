@@ -1,7 +1,7 @@
 @import url("http://fonts.googleapis.com/css?family=Economica");
 @import url("http://fonts.googleapis.com/css?family=Source\+Code\+Pro|Source\+Sans\+Pro400,400italic,700");
 body {
-  background: #42494c;
+  background: #2e2e2e;
   color: #ddd;
   font: 12px/22px 'Source Sans Pro', 'Helvetica', 'Arial', sans-serif;
   line-height: 2.2em;
@@ -29,7 +29,7 @@ dl dt {
   font-weight: bold;
 }
 dl dd {
-  border-left: 3px solid #484f52;
+  border-left: 3px solid #343434;
   margin: 0 0 0 20px;
   padding: 0 0 0 20px;
 }
@@ -38,17 +38,44 @@ img {
   display: block;
   margin: auto;
 }
+table:not(.highlighttable) {
+  margin: 1em 0;
+  table-layout: fixed;
+  width: 100%;
+}
+table:not(.highlighttable)~table {
+  margin: 3em 0 1em;
+}
+table:not(.highlighttable) thead {
+  border-bottom: 3px solid #3f3f3f;
+}
+table:not(.highlighttable) th,
+table:not(.highlighttable) td {
+  padding: 0 1em;
+}
+table:not(.highlighttable) tbody tr:hover {
+  background: #323232;
+}
+table:not(.highlighttable) tbody tr:hover th {
+  background: #363636;
+}
+table:not(.highlighttable) tbody tr th {
+  text-align: right;
+}
+p+p {
+  margin: 2em 0 1em;
+}
 p code {
-  background: #3c4245;
-  border-bottom: 1px solid #535c60;
+  background: #292929;
+  border-bottom: 1px solid #434343;
   padding: 0 3px;
 }
 ::-moz-selection {
-  background: #656f74;
+  background: #585858;
   text-shadow: none;
 }
 ::selection {
-  background: #656f74;
+  background: #585858;
   text-shadow: none;
 }
 .title {
@@ -77,14 +104,14 @@ p code {
   background-size: 105%;
   width: 100%;
   height: 80px;
-  border: 4px solid rgba(66,73,76,0.7);
+  border: 4px solid rgba(46,46,46,0.7);
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 div.code {
-  background: #3c4245;
-  border-bottom: 3px solid #50585c;
+  background: #292929;
+  border-bottom: 3px solid #3f3f3f;
   overflow: auto;
 }
 div.code pre {
@@ -94,7 +121,7 @@ div.code td {
   padding: 0 10px;
 }
 div.code td.linenos {
-  background: #404649;
+  background: #2c2c2c;
 }
 code,
 kbd,
@@ -120,18 +147,18 @@ footer #social li {
 }
 @media only screen {
   .header-container {
-    background: #4b5256;
+    background: #383838;
   }
   nav {
-    background: #4b5256;
-    border-bottom: 4px solid #535c60;
+    background: #383838;
+    border-bottom: 4px solid #434343;
   }
   nav ul {
     margin: 0;
     padding: 0;
   }
   nav ul a {
-    background: #535c60;
+    background: #434343;
     display: block;
     margin-bottom: 10px;
     padding: 15px 0;
@@ -146,13 +173,6 @@ footer #social li {
   }
   .main {
     padding: 30px 0;
-  }
-  .main article {
-    background: #4b5256;
-    padding: 1em;
-    border-color: #535c60;
-    border-width: 1px 1px 5px;
-    border-style: solid;
   }
   .main h1 {
     font-family: ;
@@ -169,8 +189,8 @@ footer #social li {
     margin-bottom: 0;
   }
   .footer-container {
-    background: #4b5256;
-    border-top: 4px solid #535c60;
+    background: #383838;
+    border-top: 4px solid #434343;
   }
   .footer-container footer {
     padding: 20px 0;
@@ -244,25 +264,26 @@ footer #social li {
     text-align: right;
     text-transform: uppercase;
     font-weight: normal;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
   }
   nav ul li:hover {
-    background: #3c4245;
+    background: #292929;
+    box-shadow: inset 0 1px 0 #303030, inset 0 -1px 0 #303030;
   }
   nav ul li:hover ul {
     display: block;
-    margin-bottom: 5px;
+    padding-bottom: 5px;
   }
   nav ul li:hover ul li {
-    background: #383e41;
+    background: #272727;
+  }
+  nav ul li:hover ul li:hover {
+    box-shadow: none;
   }
   .main-container {
-    border-left: 1px solid #535c60;
+    border-left: 1px solid #434343;
     float: right;
     width: 70%;
-    padding-right: 10%;
+    padding-right: 20%;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -274,10 +295,13 @@ footer #social li {
     font-weight: normal;
     text-transform: uppercase;
   }
+  .main article p~h1 {
+    margin-top: 4em;
+  }
   .main article h2,
   .main article h3 {
     border-width: 1px 0;
-    border-color: #535c60;
+    border-color: #434343;
     border-style: solid;
     font-size: 1em;
     font-style: italic;
@@ -288,6 +312,10 @@ footer #social li {
   }
   article > h2 {
     margin-top: 7px;
+  }
+  img.right {
+    display: inline-block;
+    float: right;
   }
   .footer-container {
     background: transparent;
