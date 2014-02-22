@@ -1,18 +1,7 @@
 {% extends 'layout.html' %}
 
-
 {% set title = item.title %}
-
-{% block breadcrumbs %}
-<div class="row">
-	<div class="large-12 columns">
-		<nav class="breadcrumbs">
-			<a href="{{ get_url() }}">Blog</a>
-			<a href="#" class="current">{{ item.title|truncate(75) }}</a>
-		</nav>
-	</div>
-</div>
-{% endblock %}
+{% set css = item.css %}
 
 {% block content %}
 <article>

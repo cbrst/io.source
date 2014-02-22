@@ -1,0 +1,25 @@
+		<div class="footer-container clearfix">
+			<footer class="wrapper clearfix">
+				<ul id="social">
+					{% if site.social.github %} <li><a href="https://github.com/{{ site.social.github }}"><i class="fa fa-github"></i></a></li>{% endif %}
+					{% if site.social.twitter %} <li><a href="https://twitter.com/#!/{{ site.social.twitter }}"><i class="fa fa-twitter-square"></i></a></li>{% endif %}
+					{% if site.social.lastfm %} <li><a href="http://www.last.fm/user/{{ site.social.lastfm }}"><i class="fa fa-music"></i></a></li>{% endif %}
+					{% if site.social.google_plus %} <li><a href="https://plus.google.com/{{ site.social.google_plus }}"><i class="fa fa-google-plus-square"></i></a></li>{% endif %}
+					{% if site.social.dribbble %} <li><a href="http://dribbble.com/{{ site.social.dribbble }}"><i class="fa fa-dribbble"></i></a></li>{% endif %}
+					{% if site.social.facebook %} <li><a href="https://www.facebook.com/{{ site.social.facebook }}"><i class="fa fa-facebook-square"></i></a></li>{% endif %}
+					{% if site.social.stack_overflow %} <li><a href="http://stackoverflow.com/users/{{ site.social.stack_overflow }}"><i class="fa fa-stack-overflow"></i></a></li>{% endif %}
+					{% if site.social.steam %} <li><a href="http://steamcommunity.com/profiles/{{ site.social.steam }}"><i class="fa fa-gamepad"></i></a></li>{% endif %}
+					<li><a onClick="$('#bitcoin').show();" href="#bitcoin"><i class="fa fa-btc"></i></a></li>
+				</ul>
+				{% if site.author %}&copy; {{ none|date('%Y') }} {{ site.author }} &ndash; {% endif %}
+				powered by <a href="http://mynt.mirroredwhite.com/">mynt</a> &ndash;
+				hosted using <a href="http://pages.github.com/">GitHub Pages</a> &ndash;
+				<a href="https://github.com/crshd/io.source">source</a>
+				<div id="bitcoin">
+					<a href="bitcoin:18vnsb92iSSBM6GWw1BDjiTYPdo43VYtCf">
+						<img src="/assets/images/qr_coin.png" >
+					</a>
+					<p>18vnsb92iSSBM6GWw1BDjiTYPdo43VYtCf</p>
+				</div>
+			</footer>
+		</div>
