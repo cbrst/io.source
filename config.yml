@@ -29,7 +29,7 @@ email: trashbukkit@gmail.com
 
 # Your site's subtitle.
 # subtitle: 'tail -f &#9749; >> /dev/throat'
-subtitle: 'tail -f /dev/brain >> /www'
+subtitle: 'tail -f /dev/brain &raquo; /www'
 # subtitle: "&#9863; < that's me!"
 
 # Your site's title. (required to generate a valid feed)
@@ -61,4 +61,3 @@ social:
 
 # If you'd like to enable Google Analytics for your site, set this to your tracking code.
 analytics:
-
