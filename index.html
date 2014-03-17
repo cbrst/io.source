@@ -18,7 +18,7 @@
 					{% if post.image %}
 					<div class="postimage" style="background-image: url({{ get_asset('images/post_images/'+post.image) }})">	</div>
 					{% endif %}
-					<p>{{ post.excerpt }}</p>
+					<p>{{ post.excerpt }} <a href="{{ get_url(post.url) }}">Read more &raquo;</a></p>
 				</article>
 {% endfor %}
 {% endblock %}
