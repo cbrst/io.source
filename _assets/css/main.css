@@ -1,9 +1,22 @@
 @import url("http://fonts.googleapis.com/css?family=Economica");
-@import url("http://fonts.googleapis.com/css?family=Source\+Code\+Pro|Source\+Sans\+Pro400,400italic,700");
+@font-face {
+  font-family: 'Fira Mono';
+  src: url("../fonts/FiraMono-Regular.eot");
+  src: local('☺'), url("../fonts/FiraMono-Regular.woff") format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Fira Sans';
+  src: url("../fonts/FiraSans-Regular.eot");
+  src: local('Fira Sans OT'), url("../fonts/FiraSans-Regular.woff") format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
 body {
   background: #2e2e2e;
   color: #ddd;
-  font: 12px/22px 'Source Sans Pro', 'Helvetica', 'Arial', sans-serif;
+  font: 12px/22px 'Fira Sans', 'Helvetica', 'Arial', sans-serif;
   line-height: 2.2em;
 }
 a {
@@ -127,7 +140,7 @@ code,
 kbd,
 pre,
 samp {
-  font-family: 'Source Code Pro', 'Consolas', 'Monaco', monospace;
+  font-family: 'Fira Mono', 'Consolas', 'Monaco', monospace;
 }
 footer a {
   text-decoration: none;
@@ -290,7 +303,7 @@ footer #social li {
   }
   .main article h1 {
     color: #fff;
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Fira Sans', 'Helvetica', 'Arial', sans-serif;
     font-size: 1em;
     font-weight: normal;
     text-transform: uppercase;
