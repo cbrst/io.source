@@ -127,6 +127,9 @@ div.code {
   border-bottom: 3px solid #3f3f3f;
   overflow: auto;
 }
+div.code:hover {
+  width: 65vw;
+}
 div.code pre {
   white-space: pre;
 }
