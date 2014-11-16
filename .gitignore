@@ -1,3 +1,5 @@
 *.sublime-project
 _posts
 _assets/images/*
+
+*.sublime-workspace

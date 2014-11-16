@@ -1,10 +1,10 @@
 @import url("http://fonts.googleapis.com/css?family=Economica");
-@import url("http://fonts.googleapis.com/css?family=Open\+Sans");
-@import url("http://fonts.googleapis.com/css?family=Inconsolata");
+@import url("http://fonts.googleapis.com/css?family=Fira+Sans:400,500,400italic");
+@import url("http://fonts.googleapis.com/css?family=Fira+Mono");
 body {
   background: #2e2e2e;
   color: #ddd;
-  font: 13px/22px 'Open Sans', 'Helvetica', 'Arial', sans-serif;
+  font: 13px/22px 'Fira Sans', 'Helvetica', 'Arial', sans-serif;
   line-height: 2.2em;
   letter-spacing: 1px;
 }
@@ -132,7 +132,7 @@ code,
 kbd,
 pre,
 samp {
-  font-family: 'Inconsolata', 'Consolas', 'Monaco', monospace;
+  font-family: 'Fira Mono', 'Consolas', 'Monaco', monospace;
 }
 footer a {
   text-decoration: none;
@@ -295,7 +295,7 @@ footer #social li {
   }
   .main article h1 {
     color: #fff;
-    font-family: 'Open Sans', 'Helvetica', 'Arial', sans-serif;
+    font-family: 'Fira Sans', 'Helvetica', 'Arial', sans-serif;
     font-size: 1em;
     font-weight: normal;
     text-transform: uppercase;
